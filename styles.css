@@ -26,6 +26,7 @@ body {
     display: grid;
     grid-template-rows: repeat(2, min-content);
     color: white;
+    z-index: 2;
 }
 
 .sidebar ul {
@@ -45,8 +46,6 @@ body {
     height: 100%;
     font-size: 20px;
     font-weight: 700;
-    
-    
 }
 
 .sidebar ul li a {
@@ -89,11 +88,11 @@ body {
 /* HEADER */
 
 header {
-    border-bottom: 1px solid black;
     display: grid;
     grid-template-rows: 1fr 1fr;
     height: fit-content;
     padding: 15px 50px;
+    z-index: 1;
 }
 
 .top-bar{
@@ -346,5 +345,15 @@ input[type=search] {
     grid-row: 3 / 4;
     margin-bottom: 30px;
 }
+
+.sidebar, header, .project, .announcements, .trending {
+    box-shadow: 5px 5px 5px -5px grey;
+}
+
+.sidebar, header {
+    box-shadow: 0px 0px 5px 0px grey;
+}
+
+
 
 
